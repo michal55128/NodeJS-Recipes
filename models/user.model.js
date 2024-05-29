@@ -15,7 +15,6 @@ const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   city: { type: String },
   role: { type: String, default: "guest", enum: ["admin", "user", "guest"] },
-  // לשאול למה צריך אורח? אם אני לא שומרת אותו בכלל בדאטאבייס כי הוא אורח בלי נתונים אז מה הקטע?
   recipes:[resipesSchema],
 
 });
