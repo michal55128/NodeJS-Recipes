@@ -12,8 +12,4 @@ router.get('/getByTime/:maxTime',getrecipesByPreparationTime);
 router.put('/:id',auth,updateRecipe);
 router.delete('/:id',auth,deleteRecipe);
 
-
-//האם לבדוק את הטוקן גם בהוספה או שרק בעדכון?
-
-
 module.exports=router;

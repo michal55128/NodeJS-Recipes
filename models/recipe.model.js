@@ -15,14 +15,14 @@ const recipeSchema = new mongoose.Schema({
   name: { type: String, required: [true, "name is require"] },
   description: { type: String },
   nameCategory: { type: String, required: true },
-  //?? מה הקטגוריה תיהיה איידי של קטגוריה מסוג סטרינג או ממש מופע של קטגוריה כאילו קשר
-  //categoryId: [{ type: mongoose.Types.ObjectId, ref: 'category' }]
   preparationTimeInMinute: { type: Number, min: 1 },
   level: { type: Number, default: 1, enum: [1, 2, 3, 4, 5] },
   addDate: { type: Date, required: true },
   layers: [layersSchema],
   Preparation: { type: [String] },
   image: { type: String },
+  // imageName: { type: String },
+  // imageUrl:{type :String},
   isPrivate: {type: Boolean},
   user: userSchema,
 });

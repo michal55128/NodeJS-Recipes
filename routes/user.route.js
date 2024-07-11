@@ -9,7 +9,6 @@ router.post('/signIn',signIn);
 router.post('/signUp',signUp);
 router.put('/:id',auth,updateUser);
 router.get("/",isAdmin, getAllUsers);
-// router.get("/", getAllUsers);
 
 module.exports=router;
 

@@ -38,9 +38,7 @@ module.exports.userValidators = {
   }),
   signup: Joi.object().keys({
     username: Joi.string().alphanum().min(3).max(30).required(),
-    // password: Joi.string().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")),
     password: Joi.string().min(6).max(10),
-    // repeat_password: Joi.ref("password"),
     email: Joi.string().email().required(),
     city:Joi.string().required().min(1).max(100).pattern(/^[\p{L}\s-]+$/u),
     role:Joi.string().default('guest'),
